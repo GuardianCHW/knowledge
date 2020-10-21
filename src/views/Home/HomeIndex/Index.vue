@@ -55,6 +55,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+    @theme_color:#aqua;
     header{
         width: 100%;
         height: 6rem;

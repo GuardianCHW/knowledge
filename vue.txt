@@ -1,0 +1,24 @@
+环境：node.js
+
+安装：
+vue2.0：npm install vue-cli -g
+vue3.0:  npm install @vue/cli -g
+
+指令：
+x:标签名
+
+v-text:
+<x v-text:"data里的数据或字符串"></x>
+
+v-html：
+<x v-html:"data里的数据或字符串"></x>
+	与v-text差别为，text只显示字符串，v-html可以引入标签
+
+v-on：
+简写：@click。。。
+@click：点击事件
+@monseenter：鼠标移入事件
+@dblclick：双击事件
+
+Vue中ESlint配置文件eslintrc.js文件详解：
+https://blog.csdn.net/weixin_38606332/article/details/80864381

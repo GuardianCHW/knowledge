@@ -1,0 +1,78 @@
+文字不可选中：
+
+标签中加   onselectstart="return false;"
+
+rem设置：
+
+function rem() {
+        let html = document.documentElement;
+        let w = html.clientWidth;
+        html.style.fontSize = 100 * (w / 1280) + "px"
+    }
+    rem();
+    window.onresize = function () {
+        rem();
+    }
+
+点击复制：
+
+<textarea id="input"></textarea>
+
+var input = document.getElementById("input")
+var text = '要复制的文本'
+input.value = text; // 修改文本框的内容
+input.select(); // 选中文本
+document.execCommand("copy"); // 执行浏览器复制命令
+
+移动端常用的meta：
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection"content="telephone=no, email=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+<meta name="format-detection" content="telphone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="renderer" content="webkit">
+<!-- 避免IE使用兼容模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+<meta name="HandheldFriendly" content="true">
+<!-- 微软的老式浏览器 -->
+<meta name="MobileOptimized" content="320">
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait">
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait">
+<!-- UC强制全屏 -->
+<meta name="full-screen" content="yes">
+<!-- QQ强制全屏 -->
+<meta name="x5-fullscreen" content="true">
+<!-- UC应用模式 -->
+<meta name="browsermode" content="application">
+<!-- QQ应用模式 -->
+<meta name="x5-page-mode" content="app">
+<!-- windows phone 点击无高光 -->
+<meta name="msapplication-tap-highlight" content="no">
+<!-- 适应移动端end -->
+mate标签详细看csdn收藏》知识点必备
+
+
+获取链接中参数：
+function parseUrl() {
+        var searchHref = window.location.search.replace('?', '');
+        var params = searchHref.split('&');
+        var returnParam = {};
+        params.forEach(function(param) {
+        var paramSplit = param.split('=');
+        returnParam[paramSplit[0]] = paramSplit[1];
+        });
+        return returnParam;
+    }
+    var params = parseUrl();
+
+
+
+

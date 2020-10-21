@@ -1,0 +1,13 @@
+git remote add origin 库的链接  连接git远程库
+git config --global user.name "设置名字"
+git config --global user.emalil "设置邮箱"
+git status   查看现在提交信息
+
+
+git add . 提交全部文件到
+git commit -m "注释"
+git push origin master  远程库的分支	注：master时分支名，一般master时主分支
+提交到远程库 
+git branch 查看本地分支	-a查看远程库分支
+
+git clone 库的链接   拉代码
